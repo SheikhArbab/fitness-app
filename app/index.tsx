@@ -2,7 +2,6 @@ import Animated, { FadeInDown } from "react-native-reanimated";
 import React from "react";
 import {
   View,
-  StatusBar,
   ImageBackground,
   Text,
   TouchableOpacity,
@@ -12,11 +11,16 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import { useRouter } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
 export default function HomeScreen() {
+
+  const router = useRouter()
+
   return (
     <View className="flex-1 items-center justify-center  ">
-      <StatusBar barStyle="dark-content" backgroundColor="white" />
+      <StatusBar style="dark" />
 
       <ImageBackground
         style={{ width: wp(100), height: hp(100) }}
@@ -50,6 +54,7 @@ export default function HomeScreen() {
 
           <View>
             <TouchableOpacity
+              onPress={() => router.push("/home")}
               style={{ height: hp(7), width: wp(80) }}
               className="bg-rose-500 flex items-center justify-center mx-auto rounded-full border-[2px] border-neutral-200"
             >
