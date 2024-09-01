@@ -20,7 +20,7 @@ export default function HomeScreen() {
 
   return (
     <View className="flex-1 items-center justify-center  ">
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
 
       <ImageBackground
         style={{ width: wp(100), height: hp(100) }}
