@@ -1,14 +1,8 @@
 import React from 'react';
 import { Dimensions, View, Image, StyleSheet } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
+import { sliderImages } from "@/constants/index"
 
-const itemImages = [
-    require("../assets/images/slide1.png"),
-    require("../assets/images/slide2.png"),
-    require("../assets/images/slide3.png"),
-    require("../assets/images/slide4.png"),
-    require("../assets/images/slide5.png")
-];
 
 const ImageSlider = () => {
     const width = Dimensions.get('window').width;
@@ -20,9 +14,8 @@ const ImageSlider = () => {
                 width={width}
                 height={width / 2}
                 autoPlay={true}
-                data={itemImages}
+                data={sliderImages}
                 scrollAnimationDuration={1000}
-                onSnapToItem={(index) => console.log('current index:', index)}
                 renderItem={({ item }) => (
                     <View style={styles.slide}>
                         <Image source={item} style={styles.image} />
