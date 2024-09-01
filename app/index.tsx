@@ -64,5 +64,5 @@ export default function HomeScreen() {
         </LinearGradient>
       </ImageBackground>
     </View>
-  );
+  )
 }
