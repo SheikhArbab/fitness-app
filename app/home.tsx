@@ -7,6 +7,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
 import Ionicons from "@expo/vector-icons/Ionicons"
+import * as C from "@/components/index"
 
 export default function Home() {
     return (
@@ -39,9 +40,11 @@ export default function Home() {
                         <Ionicons name='notifications' color={"gray"} size={30} />
                     </View>
                 </View>
-                {/* image slider */}
             </View>
-
+            {/* image slider */}
+            <View>
+                <C.ImageSlider />
+            </View>
         </SafeAreaView>
     )
 }
